@@ -1,26 +1,20 @@
-var choices = ['rock', 'paper', 'scissors'];
+/*
+if player election is the same as the computer selection = draw
 
-var computerSelection = choices[Math.floor(Math.random() * choices.length)];
+if player selection = rock & computer = paper, computer wins
+if player selection = paper & computer = rock, player wins
 
-console.log(computerSelection);
+if player selection = paper & computer = scissors, computer wins
+if player selection = scissors & computer = paper, player wins
 
-/* let randomNumber = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-
-function getComputerChoice() {
-    if (randomNumber == 1){
-        return 'Rock';
-    } else if (randomNumber == 2) {
-        return 'Paper';
-    } else if (randomNumber == 3) {
-        return 'Scissors';
-    }
-
-
-    console.log(getComputerChoice())
-}*/
-
+if player selection = scissors & computer = rock, computer wins
+if player selection = rock & computer = scissors, player wins
+*/
 
 function playRound(playerSelection, computerSelection) {
+    var choices = ['rock', 'paper', 'scissors'];
+    var computerSelection = choices[Math.floor(Math.random() * choices.length)];
+    console.log(computerSelection);
     if (playerSelection == computerSelection) {
         return 'Its a draw!';
     } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') {
@@ -37,18 +31,7 @@ function playRound(playerSelection, computerSelection) {
         return 'You win! Rock beats Scissors!';
     }
 }
-/*
-if player election is the same as the computer selection = draw
 
-if player selection = rock & computer = paper, computer wins
-if player selection = paper & computer = rock, player wins
-
-if player selection = paper & computer = scissors, computer wins
-if player selection = scissors & computer = paper, player wins
-
-if player selection = scissors & computer = rock, computer wins
-if player selection = rock & computer = scissors, player wins
-*/
 const playerSelection = prompt("Choose your weapon!");
 console.log(playRound())
 
