@@ -32,6 +32,18 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    const buttonId = event.target.id;
+    //console.log(`Button with ID "${buttonId}" was clicked.`);
+  });
+}); // This function grabs the id of the button clicked by the player
+
+
+
+
 
 /* function game() {
     for (let i = 0; i < 20; i++){
