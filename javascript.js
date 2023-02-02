@@ -33,18 +33,12 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-
-
-const playerSelection = addEventListener;
-console.log(playRound())
-
-
 /* function game() {
     for (let i = 0; i < 20; i++){
         return playRound(playerSelection, computerSelection);
     }
-}*/ 
+}*/
 
-console.log(game(playRound(playerSelection, computerSelection)))
+//console.log(game(playRound(playerSelection, computerSelection)))
 
 

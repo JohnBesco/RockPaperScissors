@@ -47,7 +47,7 @@ body {
     font-family: "VT323";
     font-size: 2.5em;
     text-align: center;
-    color: white;
+    color: yellow;
     font-weight: bold;
 }
 
@@ -57,7 +57,7 @@ body {
     font-family: "VT323";
     font-size: 2.5em;
     text-align: center;
-    color: white;
+    color: yellow;
     font-weight: bold;
 }
 
@@ -78,7 +78,8 @@ body {
   
 .content {
     padding: 10px;
-    color: white;
+    color: yellow;
+    font-family: "VT323";
     font-size: 5em;
 }
   
@@ -102,10 +103,12 @@ body {
 
 button {
     background-color: #282828;
-    height: 100px;
-    width: 100px;
-    margin-right: 4em;
-    font-size: 1em;
+    height: 150px;
+    width: 150px;
+    margin-right: 2em;
+    font-family: "VT323";
+    font-size: 2em;
+    color: yellow;
     border-radius: 50%;
     border: black;
     overflow: hidden;
