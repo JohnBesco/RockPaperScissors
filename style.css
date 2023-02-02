@@ -12,6 +12,7 @@ body {
     align-items: center;
     height: 150px;
     margin: 0;
+    border-radius: 10px;
 }
 
 #title-wrapper > .title {
@@ -59,10 +60,26 @@ body {
     color: white;
     font-weight: bold;
 }
+
+.playerContainer > .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.computerContainer > .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+
+}
   
 .content {
     padding: 10px;
-    color: red;
+    color: white;
+    font-size: 5em;
 }
   
 #gameWrapper {
@@ -76,14 +93,22 @@ body {
     margin-right: 3em;
 }
 
-
-
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
+}
 
 button {
-    height: 50px;
+    background-color: #282828;
+    height: 100px;
     width: 100px;
-    margin-right: 2em;
-    font-size: 1em
+    margin-right: 4em;
+    font-size: 1em;
+    border-radius: 50%;
+    border: black;
+    overflow: hidden;
 }
 
 
