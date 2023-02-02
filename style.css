@@ -1,3 +1,66 @@
-* {
-    background-color: gray;
+body {
+    background-color:#0f0e17;
+    padding: 0;
 }
+
+#title-wrapper {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin: 0;
+}
+
+#title-wrapper > .title {
+    font-family: "VT323";
+    font-size: 3em;
+    color: yellow;
+}
+
+.playerContainer {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.computerContainer {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+}
+  
+.playerContainer > .title {
+    background-color: lightgray;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.computerContainer > .title {
+    background-color: lightgray;
+    padding: 10px;
+    font-weight: bold;
+}
+  
+.content {
+    padding: 10px;
+    color: red;
+}
+  
+#gameWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button {
+    height: 50px;
+    width: 100px;
+    margin-right: 2em;
+    font-size: 1em
+}
+
+
+
