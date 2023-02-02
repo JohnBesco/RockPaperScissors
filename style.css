@@ -1,6 +1,7 @@
 body {
-    background-color:#0f0e17;
-    padding: 0;
+    background: #2196f3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f44336, #2196f3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f44336, #2196f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #title-wrapper {
@@ -20,26 +21,42 @@ body {
 }
 
 .playerContainer {
+    background-color: #282828;
     width: 500px;
     height: 300px;
     border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
 }
 
 .computerContainer {
+    background-color: #282828;
     width: 500px;
     height: 300px;
     border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
 }
   
 .playerContainer > .title {
-    background-color: lightgray;
+    background-color: black;
     padding: 10px;
+    font-family: "VT323";
+    font-size: 2.5em;
+    text-align: center;
+    color: white;
     font-weight: bold;
 }
 
 .computerContainer > .title {
-    background-color: lightgray;
+    background-color: black;
     padding: 10px;
+    font-family: "VT323";
+    font-size: 2.5em;
+    text-align: center;
+    color: white;
     font-weight: bold;
 }
   
@@ -52,7 +69,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5em;
 }
+
+#gameWrapper > div {
+    margin-right: 3em;
+}
+
+
 
 
 button {
