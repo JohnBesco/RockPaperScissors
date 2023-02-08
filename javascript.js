@@ -11,7 +11,7 @@ if player selection = scissors & computer = rock, computer wins
 if player selection = rock & computer = scissors, player wins
 */
 
-let choices = ['rock', 'paper', 'scissors'];
+let choices = ['🗿', '📄', '✂️'];
 
 function playRound(playerSelection, computerSelection) {
     console.log(computerSelection);
@@ -37,23 +37,32 @@ const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
 
+let computerSelection = choices[Math.floor(Math.random() * choices.length)];
+
+
 rock.addEventListener('click', function() {
-    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
+    let computerContent = document.querySelector('#computerContent');
+    computerContent.textContent = computerSelection;
     let playerSelection = this.id
+    let playerContent = document.querySelector('#playerContent');
+    playerContent.textContent = '🗿'
     console.log(playRound(playerSelection, computerSelection));
 })
 
 paperButton.addEventListener('click', function() {
-    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
     let playerSelection = this.id
+    let playerContent = document.querySelector('#playerContent');
+    playerContent.textContent = '📄'
     console.log(playRound(playerSelection, computerSelection));
 });
 
 scissorsButton.addEventListener('click', function() {
-    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
     let playerSelection = this.id
+    let playerContent = document.querySelector('#playerContent');
+    playerContent.textContent = '✂️'
     console.log(playRound(playerSelection, computerSelection));
 });
+
 
 
 
