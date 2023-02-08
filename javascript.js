@@ -11,9 +11,9 @@ if player selection = scissors & computer = rock, computer wins
 if player selection = rock & computer = scissors, player wins
 */
 
+let choices = ['rock', 'paper', 'scissors'];
+
 function playRound(playerSelection, computerSelection) {
-    var choices = ['rock', 'paper', 'scissors'];
-    var computerSelection = choices[Math.floor(Math.random() * choices.length)];
     console.log(computerSelection);
     if (playerSelection == computerSelection) {
         return 'Its a draw!';
@@ -32,14 +32,28 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const buttons = document.querySelectorAll('button');
 
-buttons.forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    const buttonId = event.target.id;
-    //console.log(`Button with ID "${buttonId}" was clicked.`);
-  });
-}); // This function grabs the id of the button clicked by the player
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+
+rock.addEventListener('click', function() {
+    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
+    let playerSelection = this.id
+    console.log(playRound(playerSelection, computerSelection));
+})
+
+paperButton.addEventListener('click', function() {
+    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
+    let playerSelection = this.id
+    console.log(playRound(playerSelection, computerSelection));
+});
+
+scissorsButton.addEventListener('click', function() {
+    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
+    let playerSelection = this.id
+    console.log(playRound(playerSelection, computerSelection));
+});
 
 
 
