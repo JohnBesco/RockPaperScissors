@@ -114,5 +114,22 @@ button {
     overflow: hidden;
 }
 
+#game-announcement-box {
+    background-color: black;
+    margin: 5em auto;
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.announcement {
+    color: yellow;
+    font-family: "VT323";
+    font-size: 3em;
+}
 
 
