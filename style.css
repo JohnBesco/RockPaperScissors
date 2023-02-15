@@ -115,21 +115,27 @@ button {
 }
 
 #game-announcement-box {
-    background-color: black;
     margin: 5em auto;
     width: 800px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
     border-radius: 10px;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .announcement {
-    color: yellow;
+    color: #ffff00;
     font-family: "VT323";
     font-size: 3em;
 }
+
 
 

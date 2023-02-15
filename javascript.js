@@ -20,6 +20,13 @@ announcement.classList.add('announcement');
 announcement.textContent = '';
 container.appendChild(announcement);
 
+const announcementTwo = document.createElement('img');
+announcementTwo.classList.add('announcementTwo');
+container.appendChild(announcementTwo);
+
+let playerScore = 0;
+let computerScore = 0;
+
 
 function playRound(playerSelection, computerSelection) {
     let playerChoice;
@@ -32,23 +39,41 @@ function playRound(playerSelection, computerSelection) {
     }
 
     if (playerChoice === computerSelection) {
-        return 'Its a draw!';
+        return announcement.textContent = 'Its a draw!';
     } else if (playerChoice === '🗿' && computerSelection === '📄') {
+        computerScore++;
+        console.log(playerScore);
+        console.log(computerScore);
         return announcement.textContent = 'You lose! Paper beats Rock!';
     } else if (playerChoice === '📄' && computerSelection === '🗿')  {
+        playerScore++;
+        console.log(playerScore);
+        console.log(computerScore);
         return announcement.textContent = 'You win! Paper beats Rock!';
     } else if (playerChoice === '📄' && computerSelection === '✂️') {
+        computerScore++;
+        console.log(playerScore);
+        console.log(computerScore);
         return announcement.textContent = 'You lose! Scissors beats Paper!';
     } else if (playerChoice === '✂️' && computerSelection === '📄') {
+        playerScore++;
+        console.log(playerScore);
+        console.log(computerScore);
         return announcement.textContent = 'You win! Scissors beats Paper!';
     } else if (playerChoice === '✂️' && computerSelection === '🗿') {
+        computerScore++
+        console.log(playerScore);
+        console.log(computerScore);
         return announcement.textContent = 'You lose! Rock beats Scissors!';
     } else if (playerChoice === '🗿' && computerSelection === '✂️') {
+        playerScore++;
+        console.log(playerScore);
+        console.log(computerScore);
         return announcement.textContent = 'You win! Rock beats Scissors!';
     }
+    
+    
 }
-
-
 
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
@@ -91,8 +116,4 @@ scissorsButton.addEventListener('click', function() {
 
 
 
-function game() {
-    for (let i = 0; i < 10; i++){
-        return playRound(playerSelection, computerSelection);
-    }
-}
+
