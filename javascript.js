@@ -20,13 +20,26 @@ announcement.classList.add('announcement');
 announcement.textContent = '';
 container.appendChild(announcement);
 
-const announcementTwo = document.createElement('img');
+const announcementTwo = document.createElement('div');
 announcementTwo.classList.add('announcementTwo');
 container.appendChild(announcementTwo);
 
 let playerScore = 0;
 let computerScore = 0;
 
+function gameOver() {
+    if (playerScore > computerScore) {
+      announcementTwo.textContent = "Congratulations! You won the game!";
+    } else if (playerScore < computerScore) {
+      announcementTwo.textContent = "You lost the game. Better luck next time!";
+    } else {
+      announcementTwo.textContent = "The game ended in a draw.";
+    }
+  
+    // Reset the scores
+    playerScore = 0;
+    computerScore = 0;
+  }
 
 function playRound(playerSelection, computerSelection) {
     let playerChoice;
@@ -71,8 +84,10 @@ function playRound(playerSelection, computerSelection) {
         console.log(computerScore);
         return announcement.textContent = 'You win! Rock beats Scissors!';
     }
-    
-    
+
+    if (playerScore >= 5 || computerScore >= 5){
+        gameOver();
+    }
 }
 
 const rockButton = document.querySelector("#rock");
