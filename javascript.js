@@ -20,6 +20,8 @@ announcement.classList.add('announcement');
 announcement.textContent = '';
 container.appendChild(announcement);
 
+announcement.setAttribute('style', 'white-space: pre;');
+
 const announcementTwo = document.createElement('div');
 announcementTwo.classList.add('announcementTwo');
 container.appendChild(announcementTwo);
@@ -27,21 +29,19 @@ container.appendChild(announcementTwo);
 let playerScore = 0;
 let computerScore = 0;
 
-function gameOver() {
+
+function gameOver(playerScore, computerScore) {
     if (playerScore > computerScore) {
-      announcementTwo.textContent = "Congratulations! You won the game!";
+      announcementTwo.textContent = 'Congratulations! You won the game!';
     } else if (playerScore < computerScore) {
-      announcementTwo.textContent = "You lost the game. Better luck next time!";
+      announcementTwo.textContent = 'You lost the game. Better luck next time!';
     } else {
-      announcementTwo.textContent = "The game ended in a draw.";
+      announcementTwo.textContent = 'The game ended in a draw.';
     }
-  
-    // Reset the scores
-    playerScore = 0;
-    computerScore = 0;
-  }
+}
 
 function playRound(playerSelection, computerSelection) {
+
     let playerChoice;
     if (playerSelection === 'rock') {
         playerChoice = '🗿';
@@ -52,41 +52,36 @@ function playRound(playerSelection, computerSelection) {
     }
 
     if (playerChoice === computerSelection) {
-        return announcement.textContent = 'Its a draw!';
+        return announcement.textContent = `Its a draw! \n Playerscore: ${playerScore} Computerscore: ${computerScore}`;
     } else if (playerChoice === '🗿' && computerSelection === '📄') {
         computerScore++;
         console.log(playerScore);
         console.log(computerScore);
-        return announcement.textContent = 'You lose! Paper beats Rock!';
+        return announcement.textContent = `You lose! Paper beats Rock! \n Playerscore: ${playerScore} Computerscore: ${computerScore}`;
     } else if (playerChoice === '📄' && computerSelection === '🗿')  {
         playerScore++;
         console.log(playerScore);
         console.log(computerScore);
-        return announcement.textContent = 'You win! Paper beats Rock!';
+        return announcement.textContent = `You win! Paper beats Rock! \n Playerscore: ${playerScore} Computerscore: ${computerScore}`
     } else if (playerChoice === '📄' && computerSelection === '✂️') {
         computerScore++;
         console.log(playerScore);
         console.log(computerScore);
-        return announcement.textContent = 'You lose! Scissors beats Paper!';
+        return announcement.textContent = `You lose! Scissors beats Paper! \n Playerscore: ${playerScore} Computerscore: ${computerScore}`;
     } else if (playerChoice === '✂️' && computerSelection === '📄') {
         playerScore++;
         console.log(playerScore);
         console.log(computerScore);
-        return announcement.textContent = 'You win! Scissors beats Paper!';
+        return announcement.textContent = `You win! Scissors beats Paper! \n Playerscore: ${playerScore} Computerscore: ${computerScore}`;
     } else if (playerChoice === '✂️' && computerSelection === '🗿') {
         computerScore++
         console.log(playerScore);
         console.log(computerScore);
-        return announcement.textContent = 'You lose! Rock beats Scissors!';
+        return announcement.textContent = `You lose! Rock beats Scissors! \n Playerscore: ${playerScore} Computerscore: ${computerScore}`;
     } else if (playerChoice === '🗿' && computerSelection === '✂️') {
         playerScore++;
-        console.log(playerScore);
         console.log(computerScore);
-        return announcement.textContent = 'You win! Rock beats Scissors!';
-    }
-
-    if (playerScore >= 5 || computerScore >= 5){
-        gameOver();
+        return announcement.textContent = `You win! Rock beats Scissors! \n Playerscore: ${playerScore} Computerscore: ${computerScore}`;
     }
 }
 
